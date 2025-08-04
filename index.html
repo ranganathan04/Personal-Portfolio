@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio</title>
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    .my-skills {
+      padding: 2rem 1rem;
+      background-color: hsl(240, 2%, 12%);
+      /* Black background */
+      color: #fff;
+    }
+
+    .skills-title {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #fff;
+      /* White title */
+    }
+
+    .skills-category {
+      font-size: 1.2rem;
+      margin: 2rem 0 1rem;
+      color: #00bcd4;
+      /* Highlighted section heading */
+      border-left: 4px solid #00bcd4;
+      padding-left: 10px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 1.5rem;
+      justify-items: center;
+    }
+
+    .skill-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .skill-card:hover {
+      transform: scale(1.05);
+    }
+
+    .skill-card img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      margin-bottom: 0.5rem;
+    }
+
+    .skill-card p {
+      color: #fff;
+      /* White captions */
+      font-size: 0.95rem;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    .invert {
+      filter: invert(1);
+      /* Invert for dark logos like GitHub, Express */
+    }
+
+    .scroll-resume-button {
+      display: inline-block;
+      margin: 2rem auto;
+      background-color: hsl(240, 1%, 25%);
+      color: white;
+      padding: 12px 18px;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 14px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-left: 50px;
+    }
+
+    .scroll-resume-button:hover {
+      background-color: hsl(45, 100%, 71%);
+      color: black;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 600px) {
+      .scroll-resume-button {
+        font-size: 13px;
+        padding: 10px 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <!--
+      - #SIDEBAR
+    -->
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar-info">
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.png" alt="Richard hanrick" width="80">
+        </figure>
+        <div class="info-content">
+          <h1 class="name" title="Richard hanrick" style="font-size: 20px;">Ranganathan Ragupathy</h1>
+          <p class="title" id="job-title">Web developer</p>
+          <!-- <a href="./assets/files/Ranganathan_Resume.pdf" download class="floating-resume-button" title="Download Resume">
+          📄 Resume
+          </a> -->
+        </div>
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+      </div>
+      <div class="sidebar-info_more">
+        <div class="separator"></div>
+        <ul class="contacts-list">
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:richard@example.com" class="contact-link">ranga.ragu02@gmail.com</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+              <a href="tel:+12133522795" class="contact-link">+91 93450 70353</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+              <time datetime="1982-06-23">April 4, 2002</time>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <address>Ganapathy, Coimbatore - 600 416</address>
+            </div>
+          </li>
+        </ul>
+        <div class="separator"></div>
+        <ul class="social-list">
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/ranganathan04" class="social-link" target="_blank">
+              <!-- <ion-icon name="logo-git-hub"></ion-icon> -->
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"
+                style="width:24px; height:24px;">
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="https://github.com/ranganathan04" class="social-link" target="_blank">
+              <!-- <ion-icon name="logo-twitter"></ion-icon> -->
+              <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub"
+                style="width:24px; height:24px;">
+            </a>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="https://app.netlify.com/teams/ranganathan04/projects" class="social-link" target="_blank">
+              <!-- <ion-icon name="logo-instagram"></ion-icon> -->
+              <img src="https://seeklogo.com/images/N/netlify-logo-758722CDF4-seeklogo.com.png" alt="Netlify"
+                style="width:24px; height:24px;">
+            </a>
+          </li>
+        </ul>
+      </div>
+      <footer id="contact">
+        <a href="./assets/files/RANGANATHAN R.pdf" download class="scroll-resume-button" title="Download Resume" target="_blank">📄
+          Resume</a>
+      </footer>
+    </aside>
+    <!--
+      - #main-content
+    -->
+    <div class="main-content">
+      <!--
+        - #NAVBAR
+      -->
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Blog</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+        </ul>
+      </nav>
+      <!--
+        - #ABOUT
+      -->
+      <article class="about  active" data-page="about">
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+        <section class="about-text">
+          <p>
+            Hi, I'm Ranganathan Ragupathy — a passionate web developer with a background in M.Sc. Computer Science,
+            driven by real-world problem-solving through full-stack and AI technologies.</p>
+          <p>
+            From attending webinars, bootcamps, and technical fests to earning certifications in C++, HTML, XML,
+            Photoshop, and Unit Testing, I’ve always sought opportunities to learn and grow. I’ve participated in
+            national-level events like the Smart India Hackathon and served as a Student Coordinator in inter-collegiate
+            tech fests.</p>
+          <p>
+            My academic journey includes hands-on projects such as a dynamic website for a furniture agency, multiple
+            front-end mini-projects, and the creation of EcoHub, a feature-rich front-end app completed in 3 days.</p>
+          <p>My PG capstone project, "DevPulse + Unemployment Prediction", is an AI-driven Developer Productivity
+            Tracker, Skill Tracker, and Employment Prediction System, built using the MERN stack, blending full-stack
+            development with machine learning insights.</p>
+          <p>I also completed a certified course on AI with Data Quality Analytics by the Don Bosco Society. I thrive on
+            learning, building, and exploring new technologies that make an impact.
+          </p>
+        </section>
+        <!--
+          - service
+        -->
+        <section class="service">
+          <h3 class="h3 service-title">What i'm doing</h3>
+          <ul class="service-list">
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg
+                " alt="design icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web design</h4>
+                <p class="service-item-text">
+                  The most modern and high-quality design made at a professional level.
+                </p>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web development</h4>
+                <p class="service-item-text">
+                  High-quality development of sites at the professional level.
+                </p>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Mobile apps</h4>
+                <p class="service-item-text">
+                  Professional development of applications for iOS and Android.
+                </p>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Photography</h4>
+                <p class="service-item-text">
+                  I make high-quality photos of any category at a professional level.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <!--
+          - testimonials
+        -->
+        <section class="testimonials">
+          <h3 class="h3 testimonials-title">Testimonials</h3>
+          <ul class="testimonials-list has-scrollbar">
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
+                </figure>
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Dr. ArulSelvan. <br>Assistant Professor
+                </h4>
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Ranganathan demonstrated excellent technical and analytical skills during his final year project,
+                    DevPulse. His ability to integrate AI with MERN stack technologies and analyze unemployment data was
+                    highly commendable. He is a self-driven learner and consistently meets deadlines with quality work.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
+                </figure>
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Mrs. Viba merry. <br>Assistant Professor
+                </h4>
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Ranganathan has been an active and enthusiastic student throughout his post-graduation. His
+                    involvement in technical quizzes, seminars, and project work shows his commitment to both academic
+                    and practical learning
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-1.png" alt="Emily evans" width="60" data-testimonials-avatar>
+                </figure>
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Mr. V.S Hariharan </h4>
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Working with Ranganathan during the Smart India Hackathon was a great experience. He took charge of
+                    the front-end development and ensured our UI was interactive, user-friendly, and responsive. His
+                    leadership and time management skills stood out in a high-pressure environment.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
+                </figure>
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Mr. Dhilip</h4>
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Ranganathan has consistently shown creativity and dedication in his web development projects. His
+                    add-on projects like EcoHub and BookNest display a great blend of design, usability, and technical
+                    understanding. He is quick to learn and always open to feedback.
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <!--
+          - testimonials modal
+        -->
+        <div class="modal-container" data-modal-container>
+          <div class="overlay" data-overlay></div>
+          <section class="testimonials-modal">
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+            <div class="modal-content">
+              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+              <time datetime="2021-06-14">14 June, 2021</time>
+              <div data-modal-text>
+                <p>
+                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                  lot of experience
+                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                  consectetur adipiscing
+                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+        <!--
+          - clients
+        -->
+        <section class="clients">
+          <h3 class="h3 clients-title">Clients</h3>
+          <ul class="clients-list has-scrollbar">
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/client-logo-1.png" alt="client logo">
+              </a>
+            </li>
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/client-logo-2.png" alt="client logo" style="height: 190px;">
+              </a>
+            </li>
+          </ul>
+        </section>
+      </article>
+      <!--
+        - #RESUME
+      -->
+      <article class="resume" data-page="resume">
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Education</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">M.Sc Computer Science</h4>
+              <h1 class="h4 timeline-item-title">KG College Of Arts And Science</h1>
+              <span>365, Thudiyalur Rd, Saravanampatti, Coimbatore, Tamil Nadu 641035</span>
+              <span>2023 - 2025</span>
+              <h1 style="color: white;">Percentage : 79%</h1>
+              <p class="timeline-text">
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">B.Sc Computer Science</h4>
+              <h1 class="h4 timeline-item-title">KG College Of Arts And Science</h1>
+              <span>365, Thudiyalur Rd, Saravanampatti, Coimbatore, Tamil Nadu 641035</span>
+              <span>2019 - 2021</span>
+              <h1 style="color: white;">Percentage : 75%</h1>
+              <p class="timeline-text">
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Higher Secoundary Certificate(HSC)</h4>
+              <h1 class="h4 timeline-item-title">Government Higher Secoundary School</h1>
+              <span>From Gopala, Swamy Street, Sridevi Nagar, Ganapathy, Coimbatore, Tamil Nadu 641006</span>
+              <span>2018 - 2019</span>
+              <h1 style="color: white;"> Percentage : 61% </h1>
+              <p class="timeline-text">
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Secoundary School Leaving Certificate(SSLC)</h4>
+              <h1 class="h4 timeline-item-title">Government Higher Secoundary School</h1>
+              <span>From Gopala, Swamy Street, Sridevi Nagar, Ganapathy, Coimbatore, Tamil Nadu 641006</span>
+              <span>2016 - 2017</span>
+              <h1 style="color: white;"> Percentage : 82% </h1>
+              <p class="timeline-text">
+              </p>
+            </li>
+          </ol>
+        </section>
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Experience</h3>
+          </div>
+          <ol class="timeline-list">
+            <!-- EXPERIENCE SECTION -->
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Virtual Internship – Data Analytics</h4>
+              <span>June 2025 – July 2025</span>
+              <p class="timeline-text">
+                Completed a virtual Data Analytics Job Simulation with Deloitte via Forage. Performed real-world tasks
+                in data analysis and forensic technology. Gained exposure to interpreting datasets, drawing insights,
+                and visual storytelling.
+                <br><strong>Technologies:</strong> Excel, Data Cleaning Tools, Dashboard Tools, Tableau
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Participant – Smart India Hackathon 2024</h4>
+              <span>September 2024</span>
+              <p class="timeline-text">
+                Contributed to developing an <strong>Online Spam Message/Post Detection System</strong> for a real-world
+                problem statement under the Smart India Hackathon 2024.
+                <br><strong>Problem Statement:</strong> Detect spam or inappropriate content in social platforms.
+                <br><strong>Solution:</strong> Designed a real-time system using machine learning to classify
+                posts/messages and reduce online spam.
+                <br><strong>Technologies:</strong> HTML, CSS, JavaScript, Python, Machine Learning (Text
+                Classification), MySql
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Final Year Project – DevPulse+Unemployment</h4>
+              <span>December 2024 – April 2025</span>
+              <p class="timeline-text">
+                Built an AI-integrated full-stack application to monitor and forecast unemployment trends across
+                regions.
+                <br><strong>Problem Statement:</strong> Increasing unemployment needs better data-driven insights for
+                policy-making.
+                <br><strong>Solution:</strong> Designed a platform to visualize unemployment data and predict future
+                trends using XGBoost and charts.
+                <br><strong>Technologies:</strong> MERN Stack (MongoDB, Express.js, React.js, Node.js), XGBoost,
+                Chart.js, Data Visualization APIs
+              </p>
+            </li>
+          </ol><br>
+          <section class="timeline">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="ribbon-outline"></ion-icon>
+              </div>
+              <h3 class="h3">Certifications</h3>
+            </div>
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Data Analytics Virtual Internship – Deloitte (Forage)</h4>
+                <span>Issued: July 2025</span>
+                <p class="timeline-text">
+                  <a href="./assets/certificates/1751363408056.pdf" target="_blank">View Credential</a>
+                </p>
+              </li>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">International Conference On Advances Of Information Technology & Computer Application For Sustainable Development (ICAITICA-25) - SRI RAMAKRISHNA College of Arts And Science</h4>
+                <span>Issued: July 2025</span>
+                <p class="timeline-text">
+                  <a href="./assets/certificates/ICAITICA - 25.pdf" target="_blank">View Credential</a>
+                  <a href="./assets/certificates/Ranganathan R.pdf" target="_blank">View Artical</a>
+                </p>
+              </li>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Novi Tech</h4>
+                <h4 class="h4 timeline-item-title">* Full Stack (MERN) Development - Novi Tech</h4>
+                <span>Issued: March 2025</span>
+                <p class="timeline-text">
+                  <a href="./assets/certificates/RANGANATHAN.R (1).pdf" target="_blank">View Credential</a>
+                </p>
+                <h4 class="h4 timeline-item-title">* Artificial Intelligence - Novi Tech</h4>
+                <span>Issued: March 2025</span>
+                <p class="timeline-text">
+                  <a href="./assets/certificates/RANGANATHAN.R.pdf" target="_blank">View Credential</a>
+                </p>
+                <h4 class="h4 timeline-item-title">* Two Hour BooTcamp in Full Stack Development - Novi Tech</h4>
+                <span>Issued: March 2025</span>
+                <p class="timeline-text">
+                  <a href="./assets/certificates/RANGANATHAN.R (2).pdf" target="_blank">View Credential</a>
+                </p>
+              </li>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">UG AddOn </h4>
+                <h4 class="h4 timeline-item-title">* Blender - IIT Bombay</h4>
+                <span>Issued: December 2021</span>
+                <p class="timeline-text">
+                  <a href="./assets/certificates/1922KA35 - RANGANATHAN RAGUPATHY (1).pdf" target="_blank">View Credential</a>
+                </p><br>
+                <h4 class="h4 timeline-item-title">* Joomla - IIT Bombay</h4>
+                <span>Issued: January 2025</span>
+                <p class="timeline-text">
+                  <a href="./assets/certificates/1922KA35 - IIT Bombay course.pdf" target="_blank">View Credential</a>
+                </p>
+              </li>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Cyber Security - Bharathiar University</h4>
+                <span>Issued: August 2021 - September 2021 </span>
+                <p class="timeline-text">
+                  <a href="./assets/certificates/1922KA35 - Ranganathan.R.pdf" target="_blank">View Credential</a>
+                </p>
+              </li>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Aptitude Quiz - Sri Jayendra Saraswathy Maha Vidyalaya College Of Arts And Science</h4>
+                <span>Issued: September 2021 </span>
+                <p class="timeline-text">
+                  <a href="./assets/certificates/1922KA35 . Ranganathan.R.pdf" target="_blank">View Credential</a>
+                </p>
+              </li>
+            </ol>
+          </section>
+          <section class="my-skills">
+            <h3 class="skills-title">My Skills</h3>
+            <!-- FRONTEND -->
+            <h4 class="skills-category">Frontend</h4>
+            <div class="skills-grid">
+              <div class="skill-card"><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
+                <p>HTML</p>
+              </div>
+              <div class="skill-card"><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
+                <p>CSS</p>
+              </div>
+              <div class="skill-card"><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
+                <p>JavaScript</p>
+              </div>
+            </div>
+            <!-- BACKEND -->
+            <h4 class="skills-category">Backend</h4>
+            <div class="skills-grid">
+              <div class="skill-card"><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg">
+                <p>Node.js</p>
+              </div>
+              <div class="skill-card"><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
+                <p>Python</p>
+              </div>
+              <div class="skill-card"><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg">
+                <p>PHP</p>
+              </div>
+            </div>
+            <!-- FRAMEWORKS / LIBRARIES -->
+            <h4 class="skills-category">Frameworks / Libraries</h4>
+            <div class="skills-grid">
+              <div class="skill-card"><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg">
+                <p>React</p>
+              </div>
+              <div class="skill-card"><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" class="invert">
+                <p>Express.js</p>
+              </div>
+              <div class="skill-card"><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg">
+                <p>Bootstrap</p>
+              </div>
+            </div>
+            <!-- DATABASE -->
+            <h4 class="skills-category">Database</h4>
+            <div class="skills-grid">
+              <div class="skill-card"><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg">
+                <p>MongoDB</p>
+              </div>
+              <div class="skill-card"><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg">
+                <p>MySQL</p>
+              </div>
+              <div class="skill-card"><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg">
+                <p>Firebase</p>
+              </div>
+            </div>
+            <!-- TOOLS / PLATFORMS -->
+            <h4 class="skills-category">Tools / Platforms</h4>
+            <div class="skills-grid">
+              <div class="skill-card"><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="invert">
+                <p>GitHub</p>
+              </div>
+              <div class="skill-card"><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg">
+                <p>Git</p>
+              </div>
+              <div class="skill-card"><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg">
+                <p>Linux</p>
+              </div>
+            </div>
+            <!-- TECHNOLOGIES -->
+            <h4 class="skills-category">Technologies</h4>
+            <div class="skills-grid">
+              <div class="skill-card"><img src="https://img.icons8.com/color/48/artificial-intelligence.png">
+                <p>AI / ML</p>
+              </div>
+              <div class="skill-card"><img src="https://img.icons8.com/color/48/api.png">
+                <p>REST APIs</p>
+              </div>
+              <div class="skill-card"><img src="https://img.icons8.com/color/48/cloud.png">
+                <p>Cloud Basics</p>
+              </div>
+            </div>
+            <!-- DESIGN TOOLS -->
+            <h4 class="skills-category">Design Tools</h4>
+            <div class="skills-grid">
+              <div class="skill-card"><img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg">
+                <p>Figma</p>
+              </div>
+              <div class="skill-card"><img src="https://img.icons8.com/color/48/adobe-xd.png">
+                <p>Adobe XD</p>
+              </div>
+              <div class="skill-card"><img src="https://img.icons8.com/color/48/canva.png">
+                <p>Canva</p>
+              </div>
+            </div>
+            <!-- CORE CS CONCEPTS -->
+            <h4 class="skills-category">Core CS Concepts</h4>
+            <div class="skills-grid">
+              <div class="skill-card"><img src="../vcard-personal-portfolio-master/assets/images/dsa-logo.png">
+                <p>DSA</p>
+              </div>
+              <div class="skill-card"><img src="../vcard-personal-portfolio-master/assets/images/oops.png">
+                <p>OOP</p>
+              </div>
+              <div class="skill-card"><img src="https://img.icons8.com/color/48/database.png">
+                <p>DBMS</p>
+              </div>
+            </div>
+          </section>
+      </article>
+      <!--
+        - #PORTFOLIO
+      -->
+      <article class="portfolio" data-page="portfolio">
+        <header>
+          <h2 class="h2 article-title">Projects</h2>
+        </header>
+        <section class="projects">
+          <div class="filter-select-box">
+            <button class="filter-select" data-select>
+              <div class="select-value" data-selecct-value>Select category</div>
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+            </button>
+            <ul class="select-list">
+            </ul>
+          </div>
+          <ul class="project-list">
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://devpulse-unemployment-prediction.netlify.app/" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/dashboard.PNG" alt="unemployment" loading="lazy">
+                </figure>
+                <h3 class="project-title">Devpulse+Unemployment Prediction</h3>
+                <p class="project-category">Web development</p>
+              </a>
+            </li>
+            <li class="project-item  active" data-filter-item data-category="Front End">
+              <a href="https://echo-hub.netlify.app/" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/Capture.PNG" alt="orizon" loading="lazy">
+                </figure>
+                <h3 class="project-title">Echo-Hub</h3>
+                <p class="project-category">Front End</p>
+              </a>
+            </li>
+            <li class="project-item  active" data-filter-item data-category="Front End">
+              <a href="https://calc-calculator-js.netlify.app/" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/Capture1.PNG" alt="fundo" loading="lazy">
+                </figure>
+                <h3 class="project-title">Calculator</h3>
+                <p class="project-category">Front End</p>
+              </a>
+            </li>
+            <li class="project-item  active" data-filter-item data-category="Front End">
+              <a href="https://to-do-application-dynamic.netlify.app/" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/Capture2.PNG" alt="brawlhalla" loading="lazy">
+                </figure>
+                <h3 class="project-title">To-Do Applicatin</h3>
+                <p class="project-category">Front End</p>
+              </a>
+            </li>
+            <li class="project-item  active" data-filter-item data-category="Front End">
+              <a href="https://job-connect-portal.netlify.app/" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/Capture3.PNG" alt="dsm." loading="lazy">
+                </figure>
+                <h3 class="project-title">Job Portal</h3>
+                <p class="project-category">Front End</p>
+              </a>
+            </li>
+            <li class="project-item  active" data-filter-item data-category="Front End">
+              <a href="https://img-gallery-site.netlify.app/" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/Capture4.PNG" alt="metaspark" loading="lazy">
+                </figure>
+                <h3 class="project-title">Image Gallery</h3>
+                <p class="project-category">Front End</p>
+              </a>
+            </li>
+            <li class="project-item  active" data-filter-item data-category="Front End">
+              <a href="https://dynamic-attendance-management-system.netlify.app/" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/Capture5.PNG" alt="summary" loading="lazy">
+                </figure>
+                <h3 class="project-title">Attendance Management System</h3>
+                <p class="project-category">Front End</p>
+              </a>
+            </li>
+            <li class="project-item  active" data-filter-item data-category="Front End">
+              <a href="https://kg-college-web-site.netlify.app/" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/Capture6.PNG" alt="task manager" loading="lazy">
+                </figure>
+                <h3 class="project-title">College Website</h3>
+                <p class="project-category">Front End</p>
+              </a>
+            </li>
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://spectacular-muffin-048031.netlify.app/" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/Capture7.PNG" alt="arrival" loading="lazy">
+                </figure>
+                <h3 class="project-title">Event Management</h3>
+                <p class="project-category">Front End</p>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </article>
+      <!--
+        - #BLOG
+      -->
+      <article class="blog" data-page="blog">
+        <header>
+          <h2 class="h2 article-title">Blog</h2>
+        </header>
+        <section class="blog-posts">
+          <ul class="blog-posts-list">
+            <li class="blog-post-item">
+              <a href="https://emerging-web-trends-2025.netlify.app/" target="_blank">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-sample-1.JPG" alt="Emerging Web Trends in 2025" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Blog Website | Front-End Project</p>
+                    <span class="dot"></span>
+                    <time datetime="2022-02-23">Jun 04, 2025</time>
+                  </div>
+                  <h3 class="h3 blog-item-title">Emerging Web Trends in 2025</h3>
+                  <p class="blog-text" style="text-align: justify;">
+                    This blog website explores the latest advancements shaping the web in 2025, including AI-driven
+                    design, Web3 integration, immersive UI/UX, and performance-first development. Built using HTML, CSS,
+                    and JavaScript, the site is fully responsive and features animated cards, category filters, and a
+                    modern layout. The project reflects current trends while showcasing my front-end development skills
+                    in creating an informative and visually engaging digital experience.
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="blog-post-item">
+              <a href="https://java-script-array-and-string-methods.netlify.app/" target="_blank">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-sample-2.JPG" alt="JavaScript Array and String Methods" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Mini Project | HTML, JavaScript</p>
+                    <span class="dot"></span>
+                    <time datetime="2022-02-23">Nov 16, 2024</time>
+                  </div>
+                  <h3 class="h3 blog-item-title">JavaScript Array and String Methods</h3>
+                  <p class="blog-text" style="text-align: justify;">
+                    This interactive webpage showcases essential JavaScript array and string methods through cleanly
+                    designed, clickable cards. Each card includes a code snippet and a “Show Result” button to
+                    demonstrate functionality in real time. Developed using HTML, CSS, and JavaScript, the project aims
+                    to help beginners learn by doing, all within a responsive and user-friendly layout.
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="blog-post-item">
+              <a href="https://health-wellness-mental-fitness-blog.netlify.app/" target=_blank>
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-sample-3.JPG" alt="Health, Wellness & Mental Fitness" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Blog Website | Front-End Project </p>
+                    <span class="dot"></span>
+                    <time datetime="2022-02-23">Jun 11, 2025</time>
+                  </div>
+                  <h3 class="h3 blog-item-title">Health, Wellness & Mental Fitness</h3>
+                  <p class="blog-text" style="text-align: justify;">
+                    This responsive blog website focuses on holistic well-being, covering topics like fitness,
+                    nutrition, mental health, and stress relief. Featuring a clean UI with a gradient header, dark mode
+                    toggle, and category-based navigation, the site enhances user experience and readability. Built
+                    using HTML, CSS, and JavaScript, it also includes a search bar and inspirational banner to guide
+                    users toward a healthier lifestyle. Designed for both desktop and mobile, the project showcases
+                    user-centered design and interactive front-end features.
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="blog-post-item">
+              <a href="https://css-text-property.netlify.app/" target="_blank">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-sample-4.JPG" alt="CSS Text Properties Showcase" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Mini Project | HTML, CSS</p>
+                    <span class="dot"></span>
+                    <time datetime="2022-02-23">Nov 13, 2024</time>
+                  </div>
+                  <h3 class="h3 blog-item-title">CSS Text Properties Showcase</h3>
+                  <p class="blog-text" style="text-align: justify;">
+                    This static page demonstrates various CSS text properties through a grid of styled cards. Each card
+                    visually explains a specific property, such as text-align, letter-spacing, text-shadow,
+                    text-transform, and more. Designed with clean layout principles, this project helps learners
+                    understand how individual text properties affect content appearance. Fully responsive and easy to
+                    navigate, it's a practical front-end mini project created to reinforce core CSS concepts.
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="blog-post-item">
+              <a href="#">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-sample-5.JPG" alt="SmartFinance Blog" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Finance Blog Website | HTML, JavaScript</p>
+                    <span class="dot"></span>
+                    <time datetime="2022-02-23">Jun 09, 2025</time>
+                  </div>
+                  <h3 class="h3 blog-item-title">SmartFinance Blog</h3>
+                  <p class="blog-text">
+                    SmartFinance Blog is a clean and responsive web platform designed to educate users about personal
+                    finance, budgeting, debt management, and smart investing. It features a category-based navigation
+                    system, a searchable post section, and a minimalist layout with user-friendly UI. The site is built
+                    using HTML, CSS, and JavaScript, focusing on clarity, performance, and accessibility. This project
+                    demonstrates practical front-end development skills while promoting financial literacy.
+                  </p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </article>
+      <!--
+        - #CONTACT
+      -->
+      <article class="contact" data-page="contact">
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.040366788521!2d76.95162614543645!3d11.035598326437082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8588cd2d4e8f9%3A0x986fc17635bc30a2!2s293%2C%20Sanganoor%20Main%20Rd%2C%20Tatabad%2C%20Laxmi%20Nagar%2C%20Sanganoor%2C%20Coimbatore%2C%20Tamil%20Nadu%20641006%2C%20India!5e0!3m2!1sen!2sbd!4v1750700575504!5m2!1sen!2sbd"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+        <section class="contact-form">
+          <h3 class="h3 form-title">Contact Form</h3>
+          <form action="#" class="form" data-form>
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+          </form>
+        </section>
+      </article>
+    </div>
+  </main>
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+    const titles = [
+      "Web Developer",
+      "Frontend Designer",
+      "JavaScript Enthusiast",
+      "React Developer",
+      "Freelancer",
+      "Python Developer",
+      "Data Engineer",
+      "MERN Stack Developer",
+    ];
+    let index = 0;
+    const titleElement = document.getElementById("job-title");
+    setInterval(() => {
+      index = (index + 1) % titles.length;
+      titleElement.style.opacity = 0;
+      setTimeout(() => {
+        titleElement.textContent = titles[index];
+        titleElement.style.opacity = 1;
+      }, 200); // Smooth fade effect
+    }, 1000);
+  </script>
+</body>
+
+</html>
